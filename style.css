@@ -1,0 +1,377 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;  /* Changed from #333 to #fff */
+    margin: 0;
+    padding: 0;
+    background-color: #000;  /* Changed from #f4f4f4 to #000 */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Header Styles */
+.header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Section Styles */
+section {
+    padding: 2rem 0;
+}
+
+h2 {
+    color: #fff;  /* Changed from #333 to #fff */
+    text-align: center;
+}
+
+/* Planet Styles */
+.planets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.planet {
+    background: #222;  /* Changed from #fff to #222 for better contrast */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);  /* Changed from rgba(0,0,0,0.1) to rgba(255,255,255,0.1) */
+    margin: 1rem;
+    padding: 1rem;
+    width: calc(33.333% - 2rem);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.planet:hover {
+    transform: translateY(-5px);
+}
+
+.planet h3 {
+    color: #fff;  /* Changed from #2c3e50 to #fff */
+    margin-top: 1rem;
+    text-align: center;  /* Added to center the text */
+}
+
+.planet img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.planet:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .planet {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    .planet {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .planet img {
+        width: 150px;
+        height: 150px;
+    }
+}
+/* Moons Section */
+.moons {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+.moons h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.moon {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.moon:hover {
+    transform: translateY(-5px);
+}
+
+.moon img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.moon:hover img {
+    transform: scale(1.1);
+}
+
+.moon h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.moon p {
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Responsive design for moons section */
+@media (max-width: 768px) {
+    .moons {
+        padding: 1.5rem;
+    }
+
+    .moon {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .moon img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .moons h2 {
+        font-size: 1.3rem;
+    }
+
+    .moon h3 {
+        font-size: 1.1rem;
+    }
+
+    .moon p {
+        font-size: 0.9rem;
+    }
+
+    .moon img {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* Solar System Objects Section */
+.solar-system-objects {
+    background-color: #0a0a2a;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.solar-system-objects h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.solar-system-objects article {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.solar-system-objects article img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.solar-system-objects article:hover img {
+    transform: scale(1.1);
+}
+
+.solar-system-objects article div {
+    flex: 1;
+}
+
+.solar-system-objects article h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.solar-system-objects article p {
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Responsive design for solar system objects section */
+@media (max-width: 768px) {
+    .solar-system-objects {
+        padding: 1.5rem;
+    }
+
+    .solar-system-objects article {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .solar-system-objects article img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .solar-system-objects h2 {
+        font-size: 1.3rem;
+    }
+
+    .solar-system-objects article h3 {
+        font-size: 1.1rem;
+    }
+
+    .solar-system-objects article p {
+        font-size: 0.9rem;
+    }
+
+    .solar-system-objects article img {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* Hover effect for solar-system-objects */
+.solar-system-objects article {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solar-system-objects article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.solar-system-objects article img {
+    transition: transform 0.3s ease;
+}
+
+.solar-system-objects article:hover img {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.solar-system-objects article div {
+    transition: opacity 0.3s ease;
+}
+
+.solar-system-objects article:hover div {
+    opacity: 0.8;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive design for footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer p {
+        font-size: 0.8rem;
+    }
+}
+/* Center align the planets section title */
+.planets h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+/* Add rotating animation to all images */
+.planet img,
+.moon img,
+.asteroid-belt img,
+.comets img,
+.kuiper-belt img {
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pause rotation on hover for better visibility */
+.planet:hover img,
+.moon:hover img,
+.asteroid-belt:hover img,
+.comets:hover img,
+.kuiper-belt:hover img {
+    animation-play-state: paused;
+}
